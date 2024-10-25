@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" src="./src/main.ts"></script>
+  <title>Todo - TS</title>
+</head>
+
+<body>
+  <div id="app" class="w-full h-full">
+    <!-- ! Nav -->
+    <nav class="w-full h-14 shadow-neutral-600 shadow-sm">
+      <div class="actual-nav 
+        md:w-3/4 md:mx-auto md:px-0 flex h-full items-center justify-between 
+        px-4
+        text-3xl
+        font-bold
+      ">
+        <div class="logo "><i class="fa-solid fa-list-check "></i></div>
+        <div class="heading">TODO APP</div>
+        <div class="others">
+          <a href="https://github.com/monukd01dev" target="_blank"><i class="fa-brands fa-github "></i></a>
+        </div>
+      </div>
+    </nav>
+    <!-- ? FORM  -->
+    <div class="form-con max-w-sm
+    md:max-w-xl mx-auto mt-10 h-10">
+      <form id="todo-form" action="" class="h-full flex ">
+        <input required class="outline-none border-slate-700 border-2 h-full px-2 text-xl w-10/12" type="text"
+          name="task-input" id="task-input">
+        <button type="submit"
+          class="bg-blue-950 text-white h-full px-2 md:px-4 hover:bg-blue-800 transition w-2/12 ml-auto">ADD</button>
+      </form>
+    </div>
+    <!-- TODO CON -->
+    <div id="todo-con" class="  mt-6 mx-auto md:max-w-2xl p-4 space-y-3">
+      <!-- * todos -->
+
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!--  -->
