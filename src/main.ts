@@ -49,21 +49,21 @@ const todoRender = (todos:Todo[]):void=>{
   // biome-ignore lint/complexity/noForEach: <explanation>
     todos.forEach((todo)=>{
     todoContainer.insertAdjacentHTML("beforeend",`
-        <div class="todo flex  p-2 pr-0
+        <div class="todo font-mono flex  p-2 pr-0
       border-2 text-xl border-blue-950
       rounded-lg
       ">
-        <div class="task w-10/12 ${todo.isCompleted && 'line-through text-slate-500'}">
+        <div class="task w-9/12 md:w-10/12 overflow-x-hidden ${todo.isCompleted && 'line-through text-slate-500'}">
           ${todo.title}
         </div>
 
-        <div class="actions  border-l-2 border-l-slate-500 w-2/12 flex items-center justify-evenly">
+        <div class="actions  border-l-2 border-l-slate-500 w-3/12 md:w-2/12 flex items-center justify-evenly">
         <p class="hidden">${todo.id}</p>
           <button class="complete-task ${todo.isCompleted ? 'text-green-500' : ""} ">
             <i class="fa-solid fa-check"></i>
           </button>
           <button class="delete-task">
-            <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-xmark hover:text-red-500 transition-all"></i>
           </button>
         </div>
       </div>
