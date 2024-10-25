@@ -18,9 +18,14 @@ const noTodos=():void=>{
         <p>No Tasks to do...</p>
         <img src="${relaxing}" class="max-w-lg" alt="">
       </div>`;
+  }else{
+    todoRender(todos)
   }
 }
-noTodos();
+
+
+
+
 
 // Form Code 
 form.onsubmit = ((e:SubmitEvent)=>{
@@ -115,6 +120,20 @@ const removeTodo=(id:string):void=>{
   todos.length === 0 ? noTodos() : todoRender(todos)
   
 }
+
+const saveTodosToLocalStorage=(todos:Todo[]):void =>{
+  localStorage.setItem("todos", JSON.stringify(todos));
+}
+const loadTodosFromLocalStorage=():void=>{
+  todos = JSON.parse(localStorage.getItem("todos") || '[]');
+  noTodos();
+}
+
+loadTodosFromLocalStorage();
+
+window.addEventListener("unload", ()=>{
+  saveTodosToLocalStorage(todos);
+})
 
 
 
